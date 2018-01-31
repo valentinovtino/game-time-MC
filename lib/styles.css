@@ -4,3 +4,18 @@ canvas {
   margin-top: 10em;
 
 }
+
+#game {
+  background-image: url('../Images/startScreen.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.score-display {
+  color: white;
+  display: inline-block;
+  font-family: 'Bungee', cursive;
+  font-size: 22px;
+  margin: 0px 10px;
+}
