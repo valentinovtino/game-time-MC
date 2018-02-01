@@ -6,12 +6,31 @@ canvas {
 
 }
 
+body {
+  background-color: black;
+}
+
+.dash-1,
+.dash-2,
+.dash-3 {
+  margin-right: 164px;
+}
+
 #game {
   background-image: url('../Images/startScreen.png');
   background-repeat: no-repeat;
   background-size: contain;
+}
 
-
+.level-display,
+.lives-remaining,
+.reset-button,
+.score-display {
+  color: white;
+  display: inline-block;
+  font-family: 'Bungee', cursive;
+  font-size: 22px;
+  margin: 0px 10px;
 }
 
 .score-display {
@@ -20,4 +39,9 @@ canvas {
   font-family: 'Bungee', cursive;
   font-size: 22px;
   margin: 0px 10px;
+}
+
+.reset-button {
+  background-color: black;
+  margin-top: 20px;
 }
