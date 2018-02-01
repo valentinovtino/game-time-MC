@@ -1,6 +1,8 @@
 const assert = require('chai').assert;
 
-const UserMissile = require('./userMissile.js');
+const Missile = require('../lib/Missile.js');
+
+const UserMissile = require('../lib/userMissile.js');
 const Game = require('../lib/Game')
 
 describe("userMissile", () => {
