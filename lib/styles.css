@@ -1,7 +1,8 @@
 canvas { 
   border: 1px solid; 
   margin-left: 30em;
-  margin-top: 10em;
+  /*margin-bottom: 10em;*/
+  /*margin-top: 10em;*/
 
 }
 
@@ -9,6 +10,7 @@ canvas {
   background-image: url('../Images/startScreen.png');
   background-repeat: no-repeat;
   background-size: contain;
+
 
 }
 
