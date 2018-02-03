@@ -21,12 +21,48 @@ describe ('Explosion', () => {
     const explosion = new Explosion(300, 300, 20);
 
     assert.equal(explosion.radius, 20);
-    assert.equal(explosion.maxRadius, 50);    
+    assert.equal(explosion.maxRadius, 30);    
   });
 
-    it('should have a property of isExploded with a default of false', () => {
+    it.skip('should have a property of isExploded with a default of false', () => {
     const explosion = new Explosion();
 
     assert.equal(explosion.isExploded, false);
   });
+
+    it('should have a property of stopBoom with a default of false', () => {
+      const explosion = new Explosion();
+
+      assert.equal(explosion.stopBoom, false); 
+    });
+
+    it.skip('should have a property of boom', () => {
+      const explosion = new Explosion();
+
+    });
+
+    it('should have a prototype explode', () => {
+      const explosion = new Explosion(); 
+
+      assert.isFunction(explosion.explode);
+    })
+
+    it('should have a prototype boom', () => {
+      const explosion = new Explosion();
+
+      assert.isFunction(explosion.boom);
+    })
+
+    it('boom should increment radius of an explosion', () => {
+      const explosion = new Explosion(); 
+
+      assert.equal(explosion.radius, 20);
+      explosion.boom();
+      assert.equal(explosion.radius, 21);
+    })
+
+    it('boom should decrement the radius of an explosion', () => {
+      
+    })
+    
 })
