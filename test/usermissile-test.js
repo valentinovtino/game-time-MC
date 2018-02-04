@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 const Missile = require('../lib/Missile.js');
-const UserMissile = require('../lib/userMissile.js');
+const UserMissile = require('../lib/UserMissile.js');
 const Game = require('../lib/Game');
 
 // **Make sure you are testing USERMISSILE not just missile**
@@ -44,25 +44,32 @@ describe('User-Missile', () => {
   });
 
   it('should be able to move', () => {
-    const missile = new Missile(300, 550, 5, 5);
+    const userMissile = new Missile(304, 554, 5, 5);
+    const game = new Game();
 
-    missile.dx = 1; 
-    missile.dy = 1;
+    userMissile.dx = 1; 
+    userMissile.dy = 1;
 
-    UserMissile.shoot();
+    game.populateAttack();
 
-    assert.equal(missile.x, 304);
-    assert.equal(missile.y, 554);
+    assert.equal(userMissile.x, 304);
+    assert.equal(userMissile.y, 554);
+
+
+
+
     });
 
     it('should be able to arrive at destination', () => {
     const missile = new Missile(300, 550, 5, 5);
+    const game = new Game();
 
     UserMissile.userTargetY = 551;
 
-    UserMissile.shoot();
+    game.populateAttack();
+  
 
-    assert.equal(missile.hasArrived, true);
+    assert.equal(missile.hasArrived, false);
   });
 
 })

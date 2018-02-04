@@ -62,7 +62,16 @@ describe ('Explosion', () => {
     })
 
     it('boom should decrement the radius of an explosion', () => {
-      
+      const explosion = new Explosion(); 
+
+      explosion.radius = 29
+
+      assert.equal(explosion.radius, 29)  
+      explosion.boom();
+      assert.equal(explosion.radius, 30); 
+      explosion.boom();
+      assert.equal(explosion.radius, 29); 
+
     })
     
 })
